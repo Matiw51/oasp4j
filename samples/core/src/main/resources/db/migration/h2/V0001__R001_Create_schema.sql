@@ -117,6 +117,22 @@ CREATE TABLE BillOrderPosition(
   CONSTRAINT FK_BillOrderPosition_billId FOREIGN KEY(billId) REFERENCES Bill(id) NOCHECK,
   CONSTRAINT FK_BillOrderPosition_orderPositionsId FOREIGN KEY(orderPositionsId) REFERENCES OrderPosition(id) NOCHECK
 );
+--  private String name;
+--
+--  private OfferEntity offer;
+--
+CREATE TABLE Special(
+  id BIGINT NOT NULL AUTO_INCREMENT,
+  modificationCounter INTEGER NOT NULL,
+  name VARCHAR(50),
+  startingHour INTEGER,
+  endingHour INTEGER,
+  startingDay INTEGER,
+  endingDay INTEGER,
+  specialPrice DECIMAL,
+  offer_id BIGINT
+);
+
 
 -- *** BinaryObject (BLOBs) ***
 CREATE TABLE BinaryObject (

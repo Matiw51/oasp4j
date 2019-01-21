@@ -77,8 +77,8 @@ public abstract class BaseWebSecurityConfig extends WebSecurityConfigurerAdapter
 
         // add basic htp autentication
         .httpBasic().and()
-
-        // configure parameters for simple form login (and logout)
+        .headers().frameOptions().sameOrigin().and()
+      // configure parameters for simple form login (and logout)
         .formLogin().successHandler(new SimpleUrlAuthenticationSuccessHandler()).defaultSuccessUrl("/")
         .failureUrl("/login.html?error").loginProcessingUrl("/j_spring_security_login").usernameParameter("username")
         .passwordParameter("password").and()
