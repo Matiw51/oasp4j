@@ -22,6 +22,9 @@
   <named-query name="get.open.order.for.table">
     <query><![CDATA[SELECT o FROM OrderEntity o WHERE o.state = io.oasp.gastronomy.restaurant.salesmanagement.common.api.datatype.OrderState.OPEN and o.tableId = :tableId]]></query>
   </named-query>
+  <named-query name="get.all.special.offers">
+    <query><![CDATA[SELECT s FROM SpecialEntity s]]></query>
+  </named-query>
 
   <!-- Uncomment the following if the database used is H2 -->
     <named-native-query name="get.all.ids.of.payed.bills">

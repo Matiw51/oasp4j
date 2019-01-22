@@ -2,12 +2,14 @@ package io.oasp.gastronomy.restaurant.offermanagement.dataaccess.api;
 
 import io.oasp.gastronomy.restaurant.general.common.api.datatype.Money;
 import io.oasp.gastronomy.restaurant.general.dataaccess.api.ApplicationPersistenceEntity;
+import io.oasp.gastronomy.restaurant.offermanagement.common.api.Special;
+import org.hibernate.annotations.Cascade;
 
 import javax.persistence.*;
 
 @Entity
 @Table(name="Special")
-public class SpecialEntity extends ApplicationPersistenceEntity {
+public class SpecialEntity extends ApplicationPersistenceEntity implements Special {
 
   private String name;
 
@@ -17,7 +19,7 @@ public class SpecialEntity extends ApplicationPersistenceEntity {
 
   private Money specialPrice;
 
-  @ManyToOne
+  @ManyToOne(cascade = CascadeType.ALL)
   public OfferEntity getOffer() {
     return offer;
   }

@@ -1,12 +1,14 @@
 package io.oasp.gastronomy.restaurant.offermanagement.dataaccess.api;
 
+import io.oasp.gastronomy.restaurant.offermanagement.common.api.WeeklyPeriod;
+
 import javax.persistence.Embeddable;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import java.time.DayOfWeek;
 
 @Embeddable
-public class WeeklyPeriodEmbeddable {
+public class WeeklyPeriodEmbeddable implements WeeklyPeriod {
 
   private DayOfWeek startingDay;
 

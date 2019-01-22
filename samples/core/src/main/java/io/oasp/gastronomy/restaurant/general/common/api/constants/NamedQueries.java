@@ -28,5 +28,7 @@ public abstract class NamedQueries {
 
   /** @see io.oasp.gastronomy.restaurant.salesmanagement.dataaccess.impl.dao.BillDaoImpl */
   public static final String GET_ALL_IDS_OF_PAYED_BILLS = "get.all.ids.of.payed.bills";
+
+  public static final String GET_SPECIAL_OFFERS = "get.all.special.offers";
   // END ARCHETYPE SKIP
 }
