@@ -6,8 +6,15 @@ import java.util.List;
 
 import javax.inject.Inject;
 
+import io.oasp.gastronomy.restaurant.offermanagement.dataaccess.api.WeeklyPeriodEmbeddable;
+import io.oasp.gastronomy.restaurant.offermanagement.logic.api.to.SpecialEto;
 import org.flywaydb.core.Flyway;
+import org.junit.Assert;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.mockito.Mock;
+import org.mockito.Mockito;
+import org.mockito.runners.MockitoJUnitRunner;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.web.WebAppConfiguration;
 
@@ -129,4 +136,5 @@ public class OfferManagementTest extends ComponentTest {
     assertEquals(offerEntity.get(0).getSideDishId(), new Long(7));
 
   }
+
 }
